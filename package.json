@@ -20,7 +20,8 @@
   ],
   "devDependencies": {
     "electron-packager": "^4.1.3",
-    "electron-prebuilt": "^0.28.3"
+    "electron-prebuilt": "^0.28.3",
+    "github": "^0.2.4"
   },
   "name": "google_play_music",
   "bugs": {
