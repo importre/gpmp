@@ -25,3 +25,4 @@ $ npm start
 $ npm run build
 ```
 
+Check `build_all.sh`

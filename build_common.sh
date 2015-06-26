@@ -10,4 +10,6 @@ electron-packager . \
   --icon=assets/app.icns \
   --ignore=node_modules/electron-prebuilt \
   --ignore=node_modules/electron-packager \
-  --ignore=.git
+  --ignore=.git \
+  --ignore=build
+
