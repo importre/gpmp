@@ -10,7 +10,7 @@ https://github.com/importre/gpmp/releases/latest
 
 ## Global Shortcuts
 You can control music using your mac keyboard.
-Just type
+Just hiiiiiit :facepunch:
 
 - <kbd>&lt;&lt;</kbd>,
 - <kbd>>||</kbd>,
