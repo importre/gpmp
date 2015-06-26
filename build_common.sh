@@ -13,3 +13,4 @@ electron-packager . \
   --ignore=.git \
   --ignore=build
 
+tar cfz build/$1-$2-$3.tar.gz build/$2-$3
