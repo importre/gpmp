@@ -22,17 +22,20 @@ github.authenticate({
 
 var owner = 'importre';
 var repo = 'gpmp';
-var version = '0.1.0';
+var version = '0.0.1';
 
 github.releases.createRelease({
   owner: owner,
   repo: repo,
-  tag_name: version
+  tag_name: version,
+  prerelease: true
 }, function (err, res) {
   if (err) return;
+
   var fs = require('fs');
-  var files = fs.readdirSync('build');
+  var files = fs.readdirSync('./build');
   var re = /.*tar\.gz$/;
+
   for (var i = 0; i < files.length; i++) {
     var file = files[i];
     if (re.exec(file)) {
@@ -40,7 +43,8 @@ github.releases.createRelease({
         owner: owner,
         id: res.id,
         repo: repo,
-        name: file
+        name: file,
+        filePath: './build/' + file
       })
     }
   }

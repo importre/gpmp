@@ -4,6 +4,10 @@ Google Play Music Player
 ![screenshot](resources/screenshot.png)
 
 
+## Download
+https://github.com/importre/gpmp/releases/latest
+
+
 ## Global Shortcuts
 You can control music using your mac keyboard.
 Just type
@@ -21,8 +25,8 @@ $ npm start
 
 
 ## Deployment
+Check `build_all.sh`. And build
+
 ```
 $ npm run build
 ```
-
-Check `build_all.sh`
