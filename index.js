@@ -17,10 +17,28 @@ app.on('window-all-closed', function () {
 app.on('ready', function () {
   initMenu();
 
-  mainWindow = new BrowserWindow({
-    width: 1280,
-    height: 800
-  });
+  const isDevMode = process.argv.indexOf('--dev') >= 0;
+  const width = 1280;
+  const height = 800;
+
+  var opts = {
+    width: width,
+    height: height,
+    resizable: true
+  };
+
+  if (isDevMode) {
+    var atomScreen = require('screen');
+    var displays = atomScreen.getAllDisplays();
+    var d2 = displays.length > 1 ? displays[1] : null;
+
+    if (d2) {
+      opts.x = d2.bounds.x + (d2.size.width - width) / 2;
+      opts.y = d2.bounds.y + (d2.size.height - height) / 2;
+    }
+  }
+
+  mainWindow = new BrowserWindow(opts);
 
   mainWindow.loadUrl('https://play.google.com/music');
   mainWindow.on('closed', function () {
