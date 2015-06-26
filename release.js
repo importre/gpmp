@@ -29,7 +29,7 @@ github.releases.createRelease({
   repo: repo,
   tag_name: version,
   prerelease: true,
-  body: ':musical_note: :guitar: headphones: :microphone: :musical_keyboard: :musical_score: :notes:'
+  body: ':musical_note: :guitar: :headphones: :microphone: :musical_keyboard: :musical_score: :notes:'
 }, function (err, res) {
   if (err) return;
 
