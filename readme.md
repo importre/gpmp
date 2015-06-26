@@ -1,6 +1,8 @@
 # GPMP
 Google Play Music Player
 
+![screenshot](resources/screenshot.png)
+
 
 ## Global Shortcuts
 You can control music using your mac keyboard.
