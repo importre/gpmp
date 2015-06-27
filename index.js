@@ -24,7 +24,8 @@ app.on('ready', function () {
   var opts = {
     width: width,
     height: height,
-    resizable: true
+    resizable: true,
+    preload: __dirname + '/preload.js'
   };
 
   if (isDevMode) {
@@ -213,27 +214,18 @@ function initMenu() {
 }
 
 function initPlayerButtons() {
-  const func = `
-    (function(el, keyCode) {
-      var event = document.createEvent("Events");
-      event.initEvent("keydown", true, true);
-      event.keyCode = event.which = keyCode;
-      el.dispatchEvent(event);
-    })
-  `;
-
   GlobalShortcut.register('MediaPlayPause', function () {
-    var code = func + '(document.body, 32);';
+    var code = 'triggerKeyCode(document.body, 32);';
     mainWindow.webContents.executeJavaScript(code);
   });
 
   GlobalShortcut.register('MediaNextTrack', function () {
-    var code = func + '(document.body, 39);';
+    var code = 'triggerKeyCode(document.body, 39);';
     mainWindow.webContents.executeJavaScript(code);
   });
 
   GlobalShortcut.register('MediaPreviousTrack', function () {
-    var code = func + '(document.body, 37);';
+    var code = 'triggerKeyCode(document.body, 37);';
     mainWindow.webContents.executeJavaScript(code);
   });
 }
