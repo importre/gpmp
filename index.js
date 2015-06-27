@@ -3,6 +3,10 @@ const app = require('app');
 const BrowserWindow = require('browser-window');
 const GlobalShortcut = require('global-shortcut');
 const Menu = require('menu');
+const Sh = require('shell');
+
+const repo = 'https://github.com/importre/gpmp';
+const issues = repo + '/issues';
 
 // report crashes to the Electron project
 require('crash-reporter').start();
@@ -68,7 +72,7 @@ function initMenu() {
       }, {
         type: 'separator'
       }, {
-        label: 'Hide Electron',
+        label: 'Hide GPMP',
         accelerator: 'Command+H',
         selector: 'hide:'
       }, {
@@ -135,17 +139,17 @@ function initMenu() {
       submenu: [{
         label: 'Learn More',
         click: function () {
-          require('shell').openExternal('https://github.com/importre/gpmp')
+          Sh.openExternal(repo)
         }
       }, {
         label: 'Documentation',
         click: function () {
-          require('shell').openExternal('https://github.com/importre/gpmp')
+          Sh.openExternal(repo)
         }
       }, {
         label: 'Search Issues',
         click: function () {
-          require('shell').openExternal('https://github.com/importre/gpmp/issues')
+          Sh.openExternal(issues)
         }
       }]
     }];
@@ -193,17 +197,17 @@ function initMenu() {
       submenu: [{
         label: 'Learn More',
         click: function () {
-          require('shell').openExternal('https://github.com/importre/gpmp')
+          Sh.openExternal(repo)
         }
       }, {
         label: 'Documentation',
         click: function () {
-          require('shell').openExternal('https://github.com/importre/gpmp')
+          Sh.openExternal(repo)
         }
       }, {
         label: 'Search Issues',
         click: function () {
-          require('shell').openExternal('https://github.com/importre/gpmp/issues')
+          Sh.openExternal(issues)
         }
       }]
     }];
