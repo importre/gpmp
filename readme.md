@@ -1,5 +1,5 @@
 # GPMP
-Google Play Music Player with [Electron][electron]
+[Google Play Music][gpm] Player with [Electron][electron]
 
 ![screenshot](resources/screenshot.png)
 
@@ -35,3 +35,4 @@ $ npm run build
 
 
 [electron]: http://electron.atom.io/
+[gpm]: https://play.google.com/music
