@@ -11,8 +11,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start": "electron --dev .",
-    "build": "rm -rf build; ./build_all.sh"
+    "build": "rm -rf build; ./build_all.sh",
+    "release": "node ./release.js",
+    "start": "electron --dev ."
   },
   "keywords": [
     "google play music",

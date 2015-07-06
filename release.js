@@ -22,7 +22,7 @@ github.authenticate({
 
 var owner = 'importre';
 var repo = 'gpmp';
-var version = '0.1.1';
+var version = '0.1.2';
 
 github.releases.createRelease({
   owner: owner,
