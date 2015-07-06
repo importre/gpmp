@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "rm -rf build; ./build_all.sh",
-    "release": "node ./release.js",
+    "release": "node release.js",
     "start": "electron --dev ."
   },
   "keywords": [
